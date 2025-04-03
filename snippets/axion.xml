@@ -48,12 +48,8 @@
   <remove-project path="hardware/lineage/compat" />
   <remove-project path="lineage-sdk" />
   <remove-project path="packages/apps/Backgrounds" />
-  <remove-project path="packages/apps/Etar" />
-  <remove-project path="packages/apps/Glimpse" />
-  <remove-project path="packages/apps/Jelly" />
   <remove-project path="packages/apps/LineageParts" />
   <remove-project path="packages/apps/Trebuchet" />
-  <remove-project path="packages/apps/Twelve" />
   <remove-project path="packages/apps/ThemePicker" />
   <remove-project path="packages/apps/Settings" />
   <remove-project path="packages/apps/SetupWizard" />
