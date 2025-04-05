@@ -79,6 +79,24 @@ For full setup instructions, follow the [ViPER4AndroidFX ReadMe](https://github.
 
 AxionOS introduces specific CPU affinity settings to optimize system performance. These flags allow builders to define small and big core groups for scheduling critical processes like **SurfaceFlinger**, **HwComposer**, and **RenderEngine** to big cores.
 
+## ⚡ Defining GameSpace Bypass charge support in `lineage_device.mk`
+
+Builders **must** define wether their device supports bypass charging in their device tree:
+
+```make
+# if device has the following nodes: 
+# /sys/class/power_supply/battery/input_suspend 
+# /sys/class/qcom-battery/input_suspend
+# bypass charging can be supported
+BYPASS_CHARGE_SUPPORTED := true (false by default)
+```
+Builders **must** also add bypass charging rules on their device tree:
+
+```init.te
+# input_suspend_label is the label assigned to /sys/class/power_supply/battery/input_suspend which varies on some device tree
+allow init <input_suspend_label>:file rw_file_perms;
+```
+
 ## 🔧 Defining CPU Core Groups in `lineage_device.mk`
 
 Builders **must** define the CPU core groups in their device tree:
