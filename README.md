@@ -89,13 +89,6 @@ AXION_CPU_SMALL_CORES := 0,1,2,3
 AXION_CPU_BIG_CORES := 4,5,6,7
 ```
 
-Builders **must** also define if the kernel shipped is modern or not:
-
-```make
-# Define if kernel is modern or not. for e.g if kernel is 4.XX below
-AXION_MODERN_KERNEL := false
-```
-
 **Do not use `?=` here**, to make sure that it overrides AxionOS defaults
 
 ## 🚀 AxionOS Defaults
@@ -106,13 +99,11 @@ AxionOS provides default values and assigns them to system properties:
 # Default core groups (if not overridden by the builder)
 AXION_CPU_SMALL_CORES ?= 0,1,2,3
 AXION_CPU_BIG_CORES ?= 4,5,6,7
-AXION_MODERN_KERNEL ?= true
 
 # AxionOS scheduling properties
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.axion_cpu_big=$(AXION_CPU_BIG_CORES) \
-    persist.sys.axion_cpu_small=$(AXION_CPU_SMALL_CORES) \
-    persist.sys.axion_is_modern_kernel=$(AXION_MODERN_KERNEL)
+    persist.sys.axion_cpu_small=$(AXION_CPU_SMALL_CORES)
 ```
 
 ## ⚙️ Purpose
