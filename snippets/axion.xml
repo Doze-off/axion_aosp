@@ -28,15 +28,9 @@
   <remove-project path="build/release" />
   <remove-project path="build/soong" />
   <remove-project path="device/lineage/sepolicy" />
-  <remove-project path="external/arm-optimized-routines" />
-  <remove-project path="external/harfbuzz_ng" />
-  <remove-project path="external/libjpeg-turbo" />
-  <remove-project path="external/skia" />
-  <remove-project path="external/sqlite" />
   <remove-project path="frameworks/av" />
   <remove-project path="frameworks/base" />
   <remove-project path="frameworks/libs/systemui" />
-  <remove-project path="frameworks/minikin" />
   <remove-project path="frameworks/native" />
   <remove-project path="frameworks/opt/telephony" />
   <remove-project path="hardware/google/camera" />
@@ -45,7 +39,6 @@
   <remove-project path="hardware/google/pixel" />
   <remove-project path="hardware/google/pixel-sepolicy" />
   <remove-project path="hardware/interfaces" />
-  <remove-project path="hardware/lineage/compat" />
   <remove-project path="lineage-sdk" />
   <remove-project path="packages/apps/Backgrounds" />
   <remove-project path="packages/apps/LineageParts" />
@@ -92,11 +85,6 @@
   <project path="device/lineage/sepolicy" name="android_device_lineage_sepolicy" remote="axion" />
   
   <!-- External  -->
-  <project path="external/arm-optimized-routines" name="android_external_arm-optimized-routines" groups="pdk" remote="axion" />
-  <project path="external/harfbuzz_ng" name="android_external_harfbuzz_ng" groups="pdk,qcom_msm8x26" remote="axion" />
-  <project path="external/libjpeg-turbo" name="android_external_libjpeg-turbo" groups="pdk" remote="axion" />
-  <project path="external/skia" name="android_external_skia" groups="pdk,qcom_msm8x26" remote="axion" />
-  <project path="external/sqlite" name="android_external_sqlite" groups="pdk" remote="axion" />
   <project path="toolchain/pgo-profiles" name="android_toolchain_pgo-profiles" groups="pdk" remote="axion" />
 
   <!-- Lineage SDK  -->
@@ -106,12 +94,10 @@
   <project path="frameworks/av" name="android_frameworks_av" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="axion" />
   <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="axion" />
   <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="axion" />
-  <project path="frameworks/minikin" name="android_frameworks_minikin" groups="pdk-cw-fs,pdk-fs" remote="axion" />
   <project path="frameworks/native" name="android_frameworks_native" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="axion" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="pdk" remote="axion" />
   
   <!-- Hardware  -->
-  <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="axion" />
   <project path="hardware/google/camera" name="android_hardware_google_camera" groups="pdk" remote="axion" />
   <project path="hardware/google/gchips" name="android_hardware_google_gchips" groups="pdk-lassen,pdk-gs-arm,pdk-gs-imgtec" remote="axion" />
   <project path="hardware/google/graphics/common" name="android_hardware_google_graphics_common" groups="pdk-lassen,pdk-gs-arm" remote="axion" />
