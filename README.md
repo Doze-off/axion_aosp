@@ -104,7 +104,11 @@ Builders **must** define the CPU core groups in their device tree:
 ```make
 # Define small and big core groups
 AXION_CPU_SMALL_CORES := 0,1,2,3
-AXION_CPU_BIG_CORES := 4,5,6,7
+AXION_CPU_BIG_CORES := 4,5,6,7 (builders can exclude prime clusters here)
+# Used by cpu limiter and performance mode
+AXION_CPU_BG := 0-2 
+AXION_CPU_FG := 0-5
+AXION_CPU_LIMIT_BG := 0-1
 ```
 
 **Do not use `?=` here**, to make sure that it overrides AxionOS defaults
@@ -117,11 +121,17 @@ AxionOS provides default values and assigns them to system properties:
 # Default core groups (if not overridden by the builder)
 AXION_CPU_SMALL_CORES ?= 0,1,2,3
 AXION_CPU_BIG_CORES ?= 4,5,6,7
+AXION_CPU_BG ?= 0-2
+AXION_CPU_FG ?= 0-5
+AXION_CPU_LIMIT_BG ?= 0-1
 
 # AxionOS scheduling properties
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.axion_cpu_big=$(AXION_CPU_BIG_CORES) \
-    persist.sys.axion_cpu_small=$(AXION_CPU_SMALL_CORES)
+    persist.sys.axion_cpu_small=$(AXION_CPU_SMALL_CORES) \
+    persist.sys.axion_cpu_bg=$(AXION_CPU_BG) \
+    persist.sys.axion_cpu_limit_bg=$(AXION_CPU_LIMIT_BG) \
+    persist.sys.axion_cpu_fg=$(AXION_CPU_FG)
 ```
 
 ## 💡 Purpose
