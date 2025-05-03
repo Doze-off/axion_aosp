@@ -9,7 +9,7 @@ To get started with **AxionOS**, you'll need to be familiar with [Source Control
 Initialize your local repository using the AxionOS manifest:
 
 ```bash
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-22.1 --git-lfs
+repo init -u https://github.com/Doze-off/axion_aosp.git -b lineage-22.1 --git-lfs
 ```
 
 Then sync the source:
